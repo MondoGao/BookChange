@@ -1,6 +1,5 @@
 $fontSizeSite: 14px;
 $bgColorTopbar: #313030;
-$bgColorSection: #cccccc;
 $bgColorHeaderSearch: #88acb2;
 $fontColorTopbar: #838383;
 $fontColorTopbarHover: #e27e1d;
@@ -96,6 +95,7 @@ a:visited {
   color: #000;
 }
 #header {
+  margin-bottom: 20px;
   div.site-topbar {
     background-color: $bgColorTopbar;
     div.topbar-nav {
