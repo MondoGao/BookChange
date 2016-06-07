@@ -33,6 +33,7 @@ ul {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  transition: color 0.25s ease;
 }
 body {
   min-width: 740px;
@@ -71,7 +72,7 @@ main {
       position: absolute;
       visibility: hidden;
       opacity: 0;
-      transition: opacity .3s ease-out;
+      transition: opacity 0.3s ease-out;
       .nav-item {
         display: block;
       }
@@ -116,11 +117,13 @@ a:visited {
   div.site-header {
     margin-top: 20px;
     div.header-logo {
-      float: left;
-      height: 124px;
-      width: 280px;
-      background-image: url("../img/header-logo.png");
-      margin-right: 20px;
+      a{
+        float: left;
+        height: 124px;
+        width: 280px;
+        background-image: url("../img/header-logo.png");
+        margin-right: 20px;
+      }
     }
     div.header-search,
     div.header-user {
@@ -131,13 +134,19 @@ a:visited {
       form.search-form {
         font-size: 0;
         position: relative;
+        &:hover {
+          input {
+            border-color: darken($bgColorHeaderSearch,15);
+          }
+        }
         button,
         input {
           font-size: 1rem;
-          height: 30px;
-          line-height: 30px;
+          height: 40px;
+          line-height: 40px;
           outline: none;
           border: 2px solid $bgColorHeaderSearch;
+          transition: background-color 0.3s, border 0.3s;
         }
         input {
           padding-left: 5px;
@@ -152,17 +161,28 @@ a:visited {
               width: 540px;
             }
           }
+          &:focus {
+            border-color: darken($bgColorHeaderSearch,15);
+          }
         }
         button {
           color: #fff;
           font-size: 10px;
-          width: 30px;
-          background: $bgColorHeaderSearch;
+          width: 40px;
+          background-color: $bgColorHeaderSearch;
           cursor: pointer;
+          &:hover {
+            border-color: darken($bgColorHeaderSearch,15);
+            background-color: darken($bgColorHeaderSearch,15);
+          }
         }
       }
     }
     div.header-user {
+      float: right;
+      height: 40px;
+      padding-right: 10px;
+      line-height: 40px;
       a {
         color: $fontColorUserInfo;
         font-size: 1.1rem;
@@ -175,7 +195,7 @@ a:visited {
     div.header-nav {
       ul.nav-list {
         li.nav-item {
-          margin: 10px 20px 0 0;
+          margin: 10px 20px 0;
           @media (min-width: 992px) {
             & {
               margin: 10px 30px 0;
