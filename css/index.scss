@@ -30,49 +30,72 @@ main.index {
     }
   }
   h2.sec-headline {
-    display: inline-block;
-    border-left: 4px solid $fontColorUserInfo;
-    margin-bottom: 10px;
-    padding-left: 3px;
-  }
-  div.sec-hd {
-    float: right;
-  }
-  div.sec-bd {
-    overflow: hidden;
-    ul.book-list {
-      width: 1000%;
-      list-style: none;
-      font-size: 0;
-      li.book-item {
-        font-size: 1rem;
-        text-align: center;
+    main.index {
+      section {
+        padding: 30px 0;
+        &:nth-child(odd) {
+          background-color: $bgColorSection;
+        }
+      }
+      h2.sec-headline {
         display: inline-block;
-        padding: 20px 5px;
-        border: 1px solid darken($bgColorSection, 10);
-        background-color: #fff;
+        border-left: 4px solid $fontColorUserInfo;
+        margin-bottom: 10px;
+        padding-left: 3px;
+      }
+      div.sec-hd {
+        float: right;
+      }
+      div.sec-bd {
         overflow: hidden;
-        @include screenFit(width, 2.425%,1.92%,1.583%);
-        @include screenFit(margin-left, .1%,.1%,.1%);
-        &:first-child {
-          margin-left: 0;
-        }
-        h4 {
-          color: darken($bgColorSection,60);
-          font-size: 1.1rem;
-          font-weight: normal;
-          line-height: 40px;
-        }
-        p {
-          color: darken($bgColorSection,40);
-          .em-red {
-            color: rgb(255, 85, 85);
-            padding: 0 3px;
+        ul.book-list {
+          width: 1000%;
+          list-style: none;
+          font-size: 0;
+          li.book-item {
+            font-size: 1rem;
+            text-align: center;
+            display: inline-block;
+            padding: 20px 5px;
+            border: 1px solid darken($bgColorSection, 10);
+            background-color: #fff;
+            overflow: hidden;
+            @include screenFit(width, 2.425%,1.92%,1.583%);
+            @include screenFit(margin-left, .1%,.1%,.1%);
+            &:first-child {
+              margin-left: 0;
+            }
+            h4 {
+              color: darken($bgColorSection,60);
+              font-size: 1.1rem;
+              font-weight: normal;
+              line-height: 40px;
+            }
+            p {
+              color: darken($bgColorSection,40);
+              .em-red {
+                color: rgb(255, 85, 85);
+                padding: 0 3px;
+              }
+            }
+            img {
+              height: 154px;
+              width: 154px;
+            }
+            div.sec-hd {
+              float: right;
+            }
+            div.sec-bd {
+              ul.book-list {
+                list-style: none;
+                font-size: 0;
+                li.book-item {
+                  font-size: 1rem;
+                  display: inline-block;
+                }
+              }
+            }
           }
-        }
-        img {
-          height: 154px;
-          width: 154px;
         }
       }
     }
