@@ -9,29 +9,71 @@ $fontColorUserInfo: #73839e;
 $fontColorFooterNav: #cacaca;
 $fontColorFooterNavHover: #94acd3;
 $bgColorSection: #e3e3e3;
-main.index{
-  section{
-    padding: 30px 0;
-    &:nth-child(odd){
-      background-color:$bgColorSection;
+@mixin screenFit($property,$value1,$value2,$value3) {
+  #{$property}: $value1;
+  @media (min-width: 992px) {
+    & {
+      #{$property}: $value2;
     }
   }
-  h2.sec-headline{
+  @media (min-width: 1200px) {
+    & {
+      #{$property}: $value3;
+    }
+  }
+}
+main.index {
+  section {
+    padding: 50px 0;
+    &:nth-child(odd) {
+      background-color: $bgColorSection;
+    }
+  }
+  h2.sec-headline {
     display: inline-block;
     border-left: 4px solid $fontColorUserInfo;
     margin-bottom: 10px;
     padding-left: 3px;
   }
-  div.sec-hd{
+  div.sec-hd {
     float: right;
   }
-  div.sec-bd{
-    ul.book-list{
+  div.sec-bd {
+    overflow: hidden;
+    ul.book-list {
+      width: 1000%;
       list-style: none;
       font-size: 0;
-      li.book-item{
+      li.book-item {
         font-size: 1rem;
+        text-align: center;
         display: inline-block;
+        padding: 20px 5px;
+        border: 1px solid darken($bgColorSection, 10);
+        background-color: #fff;
+        overflow: hidden;
+        @include screenFit(width, 2.425%,1.92%,1.583%);
+        @include screenFit(margin-left, .1%,.1%,.1%);
+        &:first-child {
+          margin-left: 0;
+        }
+        h4 {
+          color: darken($bgColorSection,60);
+          font-size: 1.1rem;
+          font-weight: normal;
+          line-height: 40px;
+        }
+        p {
+          color: darken($bgColorSection,40);
+          .em-red {
+            color: rgb(255, 85, 85);
+            padding: 0 3px;
+          }
+        }
+        img {
+          height: 154px;
+          width: 154px;
+        }
       }
     }
   }
