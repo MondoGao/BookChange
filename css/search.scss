@@ -1,0 +1,122 @@
+@import "_color.scss";
+@import "_function.scss";
+main.search {
+  section:nth-child(3) {
+    padding: 50px 0;
+  }
+  section:not(:nth-child(2)) {
+    background-color: $bgColorSection;
+  }
+  div.search-breadcrump {
+    line-height: 2rem;
+    height: 2rem;
+    a {
+      color: $fontColorHeaderNav;
+      &:last-of-type {
+        color: $fontColorTopbarHover;
+      }
+    }
+    span {
+      padding: 0 5px;
+      color: lighten($fontColorHeaderNav, 20);
+    }
+  }
+  div.filter-box {
+    padding: 15px 0;
+    div.filter-list-wrap {
+      font-size: 0;
+      border-bottom: 1px solid lighten($fontColorHeaderNav, 40);
+      padding: 10px 0;
+      &:last-child {
+        border-bottom: none;
+      }
+      dd,
+      dt {
+        font-size: 1rem;
+        display: inline-block;
+        a {
+          color: $fontColorHeaderNav;
+          transition: color .3s;
+          &:hover{
+            color:$fontColorTopbarHover;
+          }
+        }
+      }
+      dt {
+        color: lighten($fontColorHeaderNav, 30);
+        padding-right: 20px;
+      }
+      dd {
+        color: $fontColorHeaderNav;
+        padding: 0 20px;
+        &.active {
+          color: $fontColorTopbarHover;
+        }
+      }
+    }
+  }
+  div.sec-bd {
+    overflow-x: hidden;
+    ul.book-list {
+      width: 100%;
+      padding: 4px 0 6px;
+      list-style: none;
+      font-size: 0;
+      margin-top: -1%;
+      li.book-item {
+        font-size: 1rem;
+        text-align: center;
+        display: inline-block;
+        padding: 20px 5px;
+        border: 1px solid darken($bgColorSection, 10);
+        background-color: #fff;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.5s, box-shadow 0.5s;
+        margin-top: 1%;
+        &:nth-child(4n+1) {
+          margin-left: 0;
+        }
+        @media (min-width: 992px) {
+          &:nth-child(4n+1) {
+            margin-left: 1%;
+          }
+          &:nth-child(5n+1) {
+            margin-left: 0;
+          }
+        }
+        @media (min-width: 1200px) {
+          &:nth-child(5n+1) {
+            margin-left: 1%;
+          }
+          &:nth-child(6n+1) {
+            margin-left: 0;
+          }
+        }
+        @include screenFit(width, 24.25%,19.2%,15.83%);
+        @include screenFit(margin-left, 1%,1%,1%);
+        &:hover {
+          transform: translate(0,-4px);
+          box-shadow: 0 3px 25px -10px #000;
+        }
+        h4 {
+          color: darken($bgColorSection,60);
+          font-size: 1.1rem;
+          font-weight: normal;
+          line-height: 40px;
+        }
+        p {
+          color: darken($bgColorSection,40);
+          .em-red {
+            color: rgb(255, 85, 85);
+            padding: 0 3px;
+          }
+        }
+        img {
+          height: 154px;
+          width: 154px;
+        }
+      }
+    }
+  }
+}
