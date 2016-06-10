@@ -32,4 +32,8 @@ $(document).ready(function() {
     $regCover.fadeOut('400');
     $loginCover.fadeIn('400');
   });
+
+  $("#reward-img").bind('change', function(event) {
+    $(this).parent().children('label').text($(this).val());
+  });
 });
