@@ -54,7 +54,7 @@ main {
 .clearfix:after {
   clear: both;
 }
-.hide{
+.hide {
   display: none !important;
 }
 .nav-list {
@@ -90,7 +90,7 @@ a:link,
 a:visited {
   text-decoration: none;
   outline: none;
-  color: #000;
+  color: $fontColorTopbar;
 }
 #header {
   margin-bottom: 20px;
