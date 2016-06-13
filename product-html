@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="product.css" media="screen" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/header.css" media="screen" charset="utf-8">
+    <title>易书 - 旧书交易 | WESharp团队出品</title>
+</head>
+<body>
+<header id="header"></header>
+<main>
+    <div class="container">
+        <div class="main">
+        <div id="product">
+            <div id="product-top">
+                <div id="product-photo">
+                    <img src="img/frontcover.jpg" alt="" id="front-cover">
+                    <div id="bottom-photo">
+                        <div class="bottom-photo">
+                            <img src="img/1.jpg" style="width: 70px;height: 70px">
+                            <img src="img/2.jpg" style="width: 70px;height: 70px">
+                            <img src="img/3.jpg" style="width: 70px;height: 70px">
+                        </div>
+                    </div>
+                </div>
+                <div id="info">
+                    <h1>书名</h1><br>
+                    <span>￥5.00</span>
+                    <div id="seller-info">
+                        <nav>
+                            <ul>
+                                <li>卖家：</li>
+                                <li>交易地点：</li>
+                                <li>手机：</li>
+                                <li>QQ：</li>
+                                <li>发布时间：</li>
+                            </ul>
+                        </nav>
+                        <p>登陆后可查看完整信息</p>
+                    </div>
+                    <i id="icon">
+                        <img src="img/collect.png">
+                        <img src="img/share.png" style="opacity: 0.7;margin-left: 10px">
+                    </i>
+                </div>
+            </div>
+            <div id="book-bottom">
+                <div class="border left-top-border"></div>
+                <div class="border right-bottom-border"></div>
+                <div id="seller">
+                    <img src="img/avatar.jpg" alt="" style="width: 60px;height: 60px;float: left;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
+                    <p>书内无破损,有适当笔记以及课后习题答案。书内无破损,有适当笔记以及课后习题答案。书内无破损,有适当笔记以及课后习题答案。书内无破损,有适当笔记以及课后习题答案。</p>
+                </div>
+            </div>
+        </div>
+        <div id="book-other">
+            <div id="comment">
+                <div class="title"><p>评论</p></div>
+                <div class="comment">
+                    <div class="avatar">
+                        <div class="circle-border"></div>
+                        <img src="img/avatar.jpg" style="width: 60px;height: 60px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
+                    </div>
+                    <div class="reply">
+                        <span>某某某</span>
+                        <p>书内划痕会影响阅读吗？</p>
+                        <a href=""><p>回复</p></a>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="avatar">
+                        <div class="circle-border"></div>
+                        <img src="img/avatar.jpg" style="width: 60px;height: 60px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
+                    </div>
+                    <div class="reply">
+                        <span>某某某</span>
+                        <p>书内划痕会影响阅读吗？</p>
+                        <a href=""><p>回复</p></a>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="avatar">
+                        <div class="circle-border"></div>
+                        <img src="img/avatar.jpg" style="width: 60px;height: 60px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
+                    </div>
+                    <div class="reply">
+                        <span>某某某</span>
+                        <p>书内划痕会影响阅读吗？</p>
+                        <a href=""><p>回复</p></a>
+                    </div>
+                </div>
+                <div id="input">
+                    <textarea id="message" name="message" placeholder="点击头像登录后才能发表评论哦"></textarea>
+                    <div class="avatar">
+                        <div class="circle-border"></div>
+                        <img src="img/avatar.jpg" style="width: 60px;height: 60px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+            <div id="similar">
+                <div class="title"><p>相关</p></div>
+                <div class="similar-product">
+                    <img src="img/book.jpg">
+                    <div class="bottom-info">
+                        书名
+                    </div>
+                </div>
+                <div class="similar-product">
+                    <img src="img/book.jpg">
+                    <div class="bottom-info">
+                        书名
+                    </div>
+                </div>
+                <div class="similar-product">
+                    <img src="img/book.jpg">
+                    <div class="bottom-info">
+                    书名
+                    </div>
+               </div>
+                <div class="similar-product">
+                    <img src="img/book.jpg">
+                    <div class="bottom-info">
+                    书名
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</main>
+<footer id="footer"></footer>
+<script src=http://libs.useso.com/js/jquery/2.1.1/jquery.min.js></script>
+
+
+</body>
+</html>
